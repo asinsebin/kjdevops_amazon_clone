@@ -1,0 +1,20 @@
+
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8082:80"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: devops_login
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: "db_password"  # Replace with your desired password
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql

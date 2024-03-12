@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | 1mg</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .payment-options {
+      text-align: center;
+    }
+
+    .payment-options button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .payment-options button:hover {
+      background-color: #0056b3;
+    }
+
+    #paymentOptions {
+      display: none;
+    }
+
+    #paymentOptions h2 {
+      text-align: center;
+    }
+
+    #paymentOptions button {
+      display: block;
+      width: 100%;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px 0;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #paymentOptions button:hover {
+      background-color: #0056b3;
+    }
+
+    #orderConfirmation {
+      display: none;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    #orderConfirmation h2 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="payment-options">
+      <button id="proceedPayment">Proceed to Payment</button>
+    </div>
+    
+    <div id="paymentOptions">
+      <h2>Choose Payment Option</h2>
+      <button id="cardPayment">Card Payment</button>
+      <button id="payOnDelivery">Pay on Delivery</button>
+    </div>
+
+    <div id="orderConfirmation">
+      <h2>Order Confirmation</h2>
+      <p>Your order has been confirmed!</p>
+    </div>
+  </div>
+
+  <script>
+    // Function to show payment options
+    function showPaymentOptions() {
+      document.getElementById("paymentOptions").style.display = "block";
+    }
+
+    // Event listener for proceed to payment button
+    document.getElementById("proceedPayment").addEventListener("click", function() {
+      // Show payment options
+      showPaymentOptions();
+    });
+
+    // Event listener for card payment button
+    document.getElementById("cardPayment").addEventListener("click", function() {
+      // Show order confirmation for card payment
+      document.getElementById("orderConfirmation").style.display = "block";
+    });
+
+    // Event listener for pay on delivery button
+    document.getElementById("payOnDelivery").addEventListener("click", function() {
+      // Show order confirmation for pay on delivery
+      document.getElementById("orderConfirmation").style.display = "block";
+    });
+  </script>
+</body>
+</html>
