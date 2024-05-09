@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Help Page</h1>
+        <form action="submit_help.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="contact">Contact Number:</label>
+            <input type="text" id="contact" name="contact" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="reason">Select Reason:</label>
+            <select id="reason" name="reason" required>
+                <option value="return">Return Related Issue</option>
+                <option value="quality">Quality Related</option>
+                <option value="account">Account Related</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
